@@ -1,0 +1,27 @@
+import os, time
+from tkinter.tix import InputOnly
+import pyautogui
+
+time.sleep(2)
+dir = str(input("Digite o diretorio que deseja atualizar: "))
+print("Abrindo CMD!")
+time.sleep(1)
+pyautogui.hotkey("ctrl", "alt" , "t")
+time.sleep(4)
+pyautogui.write(f"cd {dir}")
+time.sleep(2)
+pyautogui.press("enter")
+time.sleep(2)
+pyautogui.write("git add *")
+time.sleep(2)
+pyautogui.press("enter")
+time.sleep(2)
+pyautogui.write('git commit -m "Atualização"')
+time.sleep(2)
+pyautogui.press("enter")
+time.sleep(2)
+pyautogui.write("git push")
+time.sleep(2)
+pyautogui.press("enter")
+time.sleep(3)
+pyautogui.hotkey("alt","f4")
